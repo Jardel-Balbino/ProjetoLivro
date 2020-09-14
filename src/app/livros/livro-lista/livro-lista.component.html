@@ -1,0 +1,47 @@
+<div class="panel panel-primary">
+<div class="panel-heading">
+  <h2>Lista de livros!</h2>
+</div>
+<div class="text-center mt-3 mb-3">
+  <form>
+    <input
+      class="rounded"
+      type="search"
+      placeholder="Buscar livro"
+      autofocus
+      (keyup)="filtro = $event.target.value"
+    >
+  </form>
+</div>
+
+<div class="panel-body">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Titulo</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th></th>
+        <th></th>
+        <th>Adicionar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let livro of livros | async | filterByDescription: filtro">
+        <td>{{livro.titulo}}</td>
+        <td>{{livro.descricao}}</td>
+        <td>{{livro.valor}}</td>
+        <td class="text-center"> <button (click)="excluiLivro(livro.id)" 
+              class="btn btn-outline-danger">Excluir</button>
+        </td>
+        <td> <button (click)="atualizaLivro(livro.id)" class="btn btn-outline-warning" 
+              style="margin-left: 10px"><i class="far fa-edit"></i> Atualizar</button>
+        </td>
+        <td> <button (click)="livroDetalhe(livro.id)" class="btn btn-info" 
+              style="margin-left: 10px">Autores</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>

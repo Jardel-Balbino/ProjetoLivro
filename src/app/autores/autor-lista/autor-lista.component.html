@@ -1,0 +1,33 @@
+<h2>Lista de autores!</h2>
+
+<div class="text-center mt-3 mb-3">
+  <form>
+    <input
+      class="rounded"
+      type="search"
+      placeholder="Buscar autor"
+      autofocus
+      (keyup)="filtro = $event.target.value"
+    >
+  </form>
+</div>
+
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let autor of autores | async">
+        <td>{{autor.nome}}</td>
+        <td>{{autor.email}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+

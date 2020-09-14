@@ -1,0 +1,64 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span>BEM VINDOS AO SISTEMA DE LIVROS</span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a routerLink="livro/adiciona" class="nav-link" routerLinkActive="active"><i class="far fa-plus-circle"></i> Novo Livro</a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="livro/lista" class="nav-link" routerLinkActive="active"><i class="far fa-list-alt"></i> Lista de Livros</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a routerLink="autor/lista" class="nav-link" routerLinkActive="active">Lista de Autores</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+    <span>{{ title }} Tecnologia da Informação!</span>
+  </div>
+
+  <div class="col-md-12">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Next Steps -->
+  <p>Veja tambem</p>
+
+  <!-- Footer -->
+  <footer class="footer">
+      Livros da Casa do Codigo.&nbsp;
+      <a href="https://www.casadocodigo.com.br" target="_blank" rel="noopener"> Clique aqui.
+      </a>
+  </footer>
+
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

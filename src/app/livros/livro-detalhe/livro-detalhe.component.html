@@ -1,0 +1,44 @@
+<h2>Insira um Autor para este Livro!</h2>
+
+<hr/>
+<div >
+    <form (ngSubmit)="emviar()">
+      <div *ngIf="livro">
+        <div>
+            <label><b> Titulo: </b></label> {{livro.titulo}}
+        </div>
+        <div>
+            <label><b> Descrição: </b></label> {{livro.descricao}}
+        </div>
+        <div>
+            <label><b> Valor: </b></label> {{livro.valor}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h3>Dados do Autor</h3>
+      </div>
+      <div>
+        <form>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" [(ngModel)]="autor.nome" 
+                    id="nome" name="nome" placeholder="Nome" required="true">
+            </div>
+            </div>
+        
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" [(ngModel)]="autor.email" 
+                id="email" name="email" placeholder="nome@exemplo.com">
+            </div>
+        </form>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar Autor</button>
+    </form>
+</div>
+<br>
+<br>
+<button (click)="lista()" class="btn btn-primary">Voltar a lista de livros</button>
+<br>
